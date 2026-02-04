@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { Bell, Menu, Moon, Settings, Sun } from "lucide-react";
+import { Bell, Link, Menu, Moon, Settings, Sun } from "lucide-react";
 
 
 const Navbar = () => {
@@ -35,11 +35,11 @@ const Navbar = () => {
             <div className="hidden md:flex justify-between items-center gap-5">
             <div>
                 <button onClick={() => {}}>
-              
+               
                     <Sun className="cursor-pointer text-gray-500" size={24} />
-         
+          
                     <Moon className="cursor-pointer text-gray-500" size={24} />
-        
+            
                 </button>
             </div>
             <div className="relative">
@@ -54,6 +54,10 @@ const Navbar = () => {
                 <span className="font-semibold">Utsav</span>
             </div>
         </div>
+
+        <Link href='/settings' >
+            <Settings className="cursor-pointer text-gray-500" size={24} />
+        </Link>
 
       </div>
 
