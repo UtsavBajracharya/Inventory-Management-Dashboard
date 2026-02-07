@@ -2,3 +2,4 @@
 
 Redux install: npm i react-redux @reduxjs/toolkit dotenv
 npm i redux-persist
+npm i prisma @prisma/client
