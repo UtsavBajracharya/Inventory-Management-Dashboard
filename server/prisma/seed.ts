@@ -1,7 +1,16 @@
-import { PrismaClient } from "../generated/prisma/client.js";
+import { PrismaClient } from "@prisma/client";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url"
+import dotenv from "dotenv"
+
+dotenv.config()
+
 const prisma = new PrismaClient();
+
+// ✅ Fix for __dirname in ESM
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 async function deleteAllData(orderedFileNames: string[]) {
   const modelNames = orderedFileNames.map((fileName) => {
@@ -67,3 +76,5 @@ main()
   .finally(async () => {
     await prisma.$disconnect();
   });
+
+console.log("DATABASE_URL:", process.env.DATABASE_URL)
