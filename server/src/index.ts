@@ -16,7 +16,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 // Import routes
-
+app.get("/hello", (req, res) => {
+  res.send("Hello, World!");
+});
 
 //Server setup
 const PORT = process.env.PORT || 5000;
