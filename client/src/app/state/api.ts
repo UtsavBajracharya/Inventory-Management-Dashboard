@@ -61,7 +61,9 @@ export const api = createApi({
   reducerPath: "api",
   tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
   endpoints: (build) => ({
-    
+      getDashboardMetrics: build.query<DashboardMetrics, void>({
+        query: () => "/dashboard/metrics",
+        providesTags: ["DashboardMetrics"],
     }),
     
     
