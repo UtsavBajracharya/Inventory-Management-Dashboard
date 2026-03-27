@@ -1,5 +1,5 @@
+import { useGetDashboardMetricsQuery } from "@/app/state/api";
 import React  from "react";
-import { useGetDashboardMetricsQuery } from "@/this.state.api.ts";
 
 const CardPopularProducts = () => {
     const { data: dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
@@ -14,7 +14,7 @@ const CardPopularProducts = () => {
                 </h3>
                 </>
             )}
-        </div>;
+        </div>
     );
 };
 
