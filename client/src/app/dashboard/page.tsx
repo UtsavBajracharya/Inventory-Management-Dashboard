@@ -4,6 +4,7 @@ import React from "react";
 import CardPopularProducts from "./CardPopularProducts";
 import { Card } from "@mui/material";
 import CardPurchaseSummary from "./CardPurchaseSummary";
+import CardSalesSummary from "./CardSalesSummary";
 
 
 const Dashboard = () => {
@@ -12,6 +13,7 @@ const Dashboard = () => {
       <CardPopularProducts />
       <div className="row-span-3 xl:row-span-6 bg-gray-500"/>
       <CardPurchaseSummary />
+      <CardSalesSummary />
       <div className="row-span-3 bg-gray-500"/>
       <div className="md:row-span-1 xl:row-span-2 bg-gray-500"/>
       <div className="md:row-span-1 xl:row-span-2 bg-gray-500"/>
