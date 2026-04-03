@@ -2,6 +2,8 @@
 
 import { useGetProductsQuery } from "../state/api";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import Header from "@/app/(components)/Header";
+
 
 const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
@@ -46,6 +48,7 @@ const Inventory = () => {
         
     return (
         <div className="p-4">
+            <Header name="Inventory" />
             <DataGrid
                 rows={products}
                 columns={columns}
