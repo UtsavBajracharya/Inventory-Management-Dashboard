@@ -1,3 +1,3 @@
-import type { Request, Response } from "express";
-export declare const getExpensesByCategory: (req: Request, res: Response) => Promise<void>;
+declare const router: import("express-serve-static-core").Router;
+export default router;
 //# sourceMappingURL=expenseRoutes.d.ts.map
