@@ -42,29 +42,25 @@ const SidebarLink = ({
     pathname === href || (pathname === "/" && href === "/dashboard");
 
   return (
-    <Link href={href}>
-      <div
-        className={`cursor-pointer flex items-center ${
-          isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"
-        }
-        hover:text-blue-500 hover:bg-blue-100 gap-3 transition-colors ${
-          isActive ? "bg-blue-200 text-white" : ""
-        }
-      }`}
-      >
-        <Icon className="w-6 h-6 !text-gray-700" />
-
-        <span
-          className={`${
-            isCollapsed ? "hidden" : "block"
-          } font-medium text-gray-700`}
+      <Link href={href}>
+        <div
+          className={`flex cursor-pointer items-center gap-3 transition-colors ${
+            isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"
+          } ${
+            isActive
+              ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+              : "text-gray-700 hover:bg-blue-100 hover:text-blue-600 dark:text-gray-200 dark:hover:bg-blue-900/30 dark:hover:text-blue-300"
+          }`}
         >
-          {label}
-        </span>
-      </div>
-    </Link>
-  );
-};
+          <Icon className="h-6 w-6" />
+          <span className={`${isCollapsed ? "hidden" : "block"} font-medium`}>
+            {label}
+          </span>
+        </div>
+      </Link>
+    );
+  };
+
 
 const Sidebar = () => {
   
@@ -79,14 +75,14 @@ const Sidebar = () => {
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
-  } bg-white transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
+  } h-full overflow-hidden bg-white shadow-md transition-all duration-300 z-40 dark:bg-gray-900`;
 
   return (
     <div className={sidebarClassNames}>
       {/* Logo */}
       <div
-        className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
-          isSidebarCollapsed ? "px-5" : "px-8"
+         className={`flex items-center justify-between gap-3 pt-8 md:justify-normal ${
+            isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
         <Image
