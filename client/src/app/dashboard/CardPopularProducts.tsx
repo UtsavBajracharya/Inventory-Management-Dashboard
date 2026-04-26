@@ -11,7 +11,7 @@ const CardPopularProducts = () => {
                 <div className="m-5">Loading...</div>
             ) : (
                 <>
-                <h3 className="text-lg font-semibold px-7 pt-5 pb-2">
+                <h3 className="text-lg font-semibold px-7 pt-5 pb-2 text-gray-700">
                     Popular Products
                 </h3>
                 <hr />
@@ -19,9 +19,9 @@ const CardPopularProducts = () => {
                     {dashboardMetrics?.popularProducts.map((product) => (
                         <div
                             key={product.productId}
-                            className="flex items-center justify-between gap-3 px-5 py-7 border-b"
+                            className="flex items-center justify-between gap-3 px-5 py-7 border-b-[1px] border-gray-200 last:border-0"
                         >
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-3 text-gray-700">
                                     <div>img</div>
                                     <div className="flex flex-col justify-between gap-1">
                                         <div className="font-bold text-gray-700">
@@ -37,7 +37,7 @@ const CardPopularProducts = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="text-xs flex items-center">
+                            <div className="text-xs flex items-center text-gray-700">
                                 <button className="p-2 rounded-full bg-blue-100 text-blue-600 mr-2">
                                     <ShoppingBag className="w-4 h-4" />
                                 </button>

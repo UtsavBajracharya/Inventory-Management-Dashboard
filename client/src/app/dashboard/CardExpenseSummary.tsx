@@ -51,7 +51,7 @@ const CardExpenseSummary = () => {
         <>
           {/* HEADER */}
           <div>
-            <h2 className="text-lg font-semibold mb-2 px-7 pt-5">
+            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-gray-700">
               Expense Summary
             </h2>
             <hr />
@@ -82,13 +82,13 @@ const CardExpenseSummary = () => {
                 </PieChart>
               </ResponsiveContainer>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center basis-2/5">
-                <span className="font-bold text-xl">
+                <span className="font-bold text-xl text-gray-700">
                   ${formattedTotalExpenses}
                 </span>
               </div>
             </div>
             {/* LABELS */}
-            <ul className="flex flex-col justify-around items-center xl:items-start py-5 gap-3">
+            <ul className="flex flex-col justify-around items-center xl:items-start py-5 gap-3 text-gray-700">
               {expenseCategories.map((entry, index) => (
                 <li
                   key={`legend-${index}`}
@@ -107,7 +107,7 @@ const CardExpenseSummary = () => {
           <div>
             <hr />
             {expenseSummary && (
-              <div className="mt-3 flex justify-between items-center px-7 mb-4">
+              <div className="mt-3 flex justify-between items-center px-7 mb-4 text-gray-700">
                 <div className="pt-2">
                   <p className="text-sm">
                     Average:{" "}
