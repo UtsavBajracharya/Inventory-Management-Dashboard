@@ -110,23 +110,23 @@ const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
         </p>
       </div>
 
-      {/* FILTERS */}
-      <div className="flex flex-col md:flex-row justify-between gap-4">
-        <div className="w-full md:w-1/3 rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-900">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">
-            Filter by Category and Date
-          </h3>
+      {/* FILTERS + CHART */}
+      <div className="flex flex-col justify-between gap-4 md:flex-row">
+        {/* FILTER CARD */}
+        <div className={`w-full p-6 md:w-1/3 ${classNames.card}`}>
+          <h3 className={classNames.cardHeading}>Filter by Category and Date</h3>
+
           <div className="space-y-4">
             {/* CATEGORY */}
             <div>
-              <label htmlFor="category" className={classNames.label}> 
+              <label htmlFor="category" className={classNames.label}>
                 Category
               </label>
               <select
                 id="category"
                 name="category"
                 className={classNames.selectInput}
-                defaultValue="All"
+                value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
               >
                 <option>All</option>
@@ -135,6 +135,7 @@ const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
                 <option>Salaries</option>
               </select>
             </div>
+
             {/* START DATE */}
             <div>
               <label htmlFor="start-date" className={classNames.label}>
@@ -145,9 +146,11 @@ const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
                 id="start-date"
                 name="start-date"
                 className={classNames.selectInput}
+                value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
               />
             </div>
+
             {/* END DATE */}
             <div>
               <label htmlFor="end-date" className={classNames.label}>
@@ -158,38 +161,58 @@ const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
                 id="end-date"
                 name="end-date"
                 className={classNames.selectInput}
+                value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
               />
             </div>
           </div>
         </div>
-        {/* PIE CHART */}
-        <div className="flex-grow bg-white shadow rounded-lg p-4 md:p-6">
+
+        {/* PIE CHART CARD */}
+        <div className={`flex-grow p-4 md:p-6 ${classNames.card}`}>
           <ResponsiveContainer width="100%" height={400}>
             <PieChart>
               <Pie
                 data={aggregatedData}
                 cx="50%"
                 cy="50%"
-                label
                 outerRadius={150}
-                fill="#8884d8"
                 dataKey="amount"
+                label={renderPieLabel}
+                labelLine={false}
                 onMouseEnter={(_, index) => setActiveIndex(index)}
               >
-                {aggregatedData.map(
-                  (entry: AggregatedDataItem, index: number) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={
-                        index === activeIndex ? "rgb(29, 78, 216)" : entry.color
-                      }
-                    />
-                  )
-                )}
+                {aggregatedData.map((entry: AggregatedDataItem, index: number) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={index === activeIndex ? "rgb(29, 78, 216)" : entry.color}
+                    stroke={isDarkMode ? "#111827" : "#ffffff"}
+                  />
+                ))}
               </Pie>
-              <Tooltip />
-              <Legend />
+
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: isDarkMode ? "#111827" : "#ffffff",
+                  border: `1px solid ${isDarkMode ? "#374151" : "#e5e7eb"}`,
+                  borderRadius: "8px",
+                  color: isDarkMode ? "#f3f4f6" : "#111827",
+                }}
+                itemStyle={{
+                  color: isDarkMode ? "#f3f4f6" : "#111827",
+                }}
+                labelStyle={{
+                  color: isDarkMode ? "#d1d5db" : "#374151",
+                }}
+          
+              />
+
+              <Legend
+                wrapperStyle={{
+                  color: labelColor,
+                  paddingTop: "12px",
+                }}
+              />
             </PieChart>
           </ResponsiveContainer>
         </div>
