@@ -29,8 +29,8 @@ const Settings = () => {
   return (
     <div className="w-full">
       <Header name="User Settings" />
-      <div className="overflow-x-auto mt-5 shadow-md">
-        <table className="min-w-full bg-white rounded-lg">
+      <div className="mt-5 overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-900">
+        <table className="min-w-full rounded-lg bg-white dark:bg-gray-900">
           <thead className="bg-gray-800 text-white">
             <tr>
               <th className="text-left py-3 px-4 uppercase font-semibold text-sm">
