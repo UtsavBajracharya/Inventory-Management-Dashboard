@@ -11,6 +11,7 @@ const Rating = ({ rating }: RatingProps) => {
             key={index}
             color={index <= rating ? "#FFC107" : "#E4E5E9"}
             className="w-3 h-3"
+            fill={index <= rating ? "#FFC107" : "none"}
         />
     ));
 };
