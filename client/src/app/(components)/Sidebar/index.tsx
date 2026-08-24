@@ -17,12 +17,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-<Image
-  src="next.svg"
+{/* <Image
+  src="/next.svg"
   alt="Logo"
   width={120}
   height={40}
-/>
+/> */}
 
 interface SidebarLinkProps {
   href: string;
@@ -86,23 +86,24 @@ const Sidebar = () => {
         }`}
       >
         <Image
-          src="next.svg"
+          src="/next.svg"
           alt="invest-logo"
           width={27}
           height={27}
-          className="rounded w-8"
+          className="w-8 rounded"
         />
+   
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
-          } font-extrabold text-2xl`}
+          } text-2xl font-extrabold text-gray-900 dark:text-gray-100`}
         >
           InvestStock
         </h1>
 
         <button
-          className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
-          onClick={toggleSidebar}
+           className="cursor-pointer rounded-full bg-gray-100 px-3 py-3 text-gray-700 transition-all duration-200 hover:bg-blue-100 hover:text-blue-600 hover:scale-105 hover:shadow-sm dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-blue-900/30 dark:hover:text-blue-300 md:hidden"
+            onClick={toggleSidebar}
         >
           <Menu className="w-4 h-4" />
         </button>
