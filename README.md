@@ -52,7 +52,7 @@ The dashboard is organized around six main sections — **Dashboard, Inventory, 
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](<img width="2561" height="1458" alt="Inventory-Manangement-Dashboard" src="https://github.com/user-attachments/assets/b98b34ae-a3b5-4b01-af4f-a968db9c3c6e" />)
+![Dashboard]<img width="2561" height="1458" alt="Inventory-Manangement-Dashboard" src="https://github.com/user-attachments/assets/b98b34ae-a3b5-4b01-af4f-a968db9c3c6e" />
 
 ### Product List
 ![Product List](./screenshots/products.png)
