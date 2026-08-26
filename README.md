@@ -36,7 +36,7 @@ A full-stack **inventory, sales, and expense management dashboard** built with N
 - **`client/`** — a Next.js (App Router) dashboard UI that talks to the API via Redux Toolkit Query.
 - **`server/`** — a Node.js + Express REST API backed by PostgreSQL via Prisma ORM.
 
-The dashboard is organized around six main sections — **Dashboard, Inventory, Products, Users, Expenses,** and **Settings** — reachable from a collapsible sidebar, with full light/dark theme support.
+The dashboard is organized around six main sections — **Dashboard, Inventory, Products, Users, Expenses,** and **Settings** accessed from the sidebar.
 
 ## ✨ Key Features
 
@@ -50,8 +50,6 @@ The dashboard is organized around six main sections — **Dashboard, Inventory, 
 - **📱 Responsive, Collapsible Sidebar** — A layout that adapts smoothly from mobile to desktop.
 
 ## 📸 Screenshots
-
-> Add your screenshots to a `screenshots/` folder at the root of the repo, then reference them below (the filenames are just a suggestion — match them to whatever you save).
 
 ### Dashboard
 ![Dashboard](./screenshots/dashboard.png)
@@ -215,7 +213,7 @@ Open `http://localhost:3000` in your browser to view the dashboard.
 
 ## 🗺 Roadmap
 
-Ideas for taking this project further:
+Ideas for taking this project further(on process):
 
 - Authentication and role-based access control
 - Edit/delete actions for products and inventory records
