@@ -52,22 +52,22 @@ The dashboard is organized around six main sections — **Dashboard, Inventory, 
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](<img width="2561" height="1458" alt="Inventory-Manangement-Dashboard" src="https://github.com/user-attachments/assets/b98b34ae-a3b5-4b01-af4f-a968db9c3c6e" />)
 
 ### Product List
 ![Product List](./screenshots/products.png)
 
 ### Add Product
-![Add Product](./screenshots/add-product.png)
+![Add Product](<img width="1920" height="917" alt="Inventory-Manangement-Dashboard-products" src="https://github.com/user-attachments/assets/a35295df-2939-451d-8092-0b7a940c2e89" />)
 
 ### Inventory
-![Inventory](./screenshots/inventory.png)
+![Inventory](<img width="2561" height="1356" alt="Inventory-Manangement-Dashboard-Inventory" src="https://github.com/user-attachments/assets/097b2964-e49c-4cd8-ba11-6c30d7c924fe" />)
 
 ### Expenses
-![Expenses](./screenshots/expenses.png)
+![Expenses](<img width="2561" height="1356" alt="Inventory-Manangement-Dashboard-expenses" src="https://github.com/user-attachments/assets/0df7d209-d010-4a46-a1e4-2a793b62860c" />)
 
-### User Settings
-![User Settings](./screenshots/settings.png)
+### Settings
+![User Settings](<img width="1920" height="917" alt="Inventory-Manangement-Dashboard-settings" src="https://github.com/user-attachments/assets/291a2029-c3a3-4bde-8025-4976dbab934e" />)
 
 ## 🛠 Tech Stack
 
