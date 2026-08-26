@@ -1,6 +1,6 @@
 # 📦 Inventory Management Dashboard
 
-A full-stack **inventory, sales, and expense management dashboard** built with Next.js and Node.js. It gives a business a single place to track products and stock levels, monitor sales and purchase trends, review expenses by category, and manage users — all through a clean, responsive, dark-mode-friendly interface.
+A full-stack **inventory, sales, and expense management dashboard** built with Next.js, React.js and Redux. The backend is powered by Node.js, using Prisma as the ORM to facilitate database interactions. It gives a business a single place to track products and stock levels, monitor sales and purchase trends, review expenses by category, and manage users through a clean and responsive along with dark-mode-friendly interface.
 
 <p>
   <img alt="Next.js" src="https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white">
@@ -33,22 +33,20 @@ A full-stack **inventory, sales, and expense management dashboard** built with N
 
 ## 🧾 Overview
 
-This project is a **monorepo** split into two independent applications:
-
 - **`client/`** — a Next.js (App Router) dashboard UI that talks to the API via Redux Toolkit Query.
 - **`server/`** — a Node.js + Express REST API backed by PostgreSQL via Prisma ORM.
 
-The dashboard is organized around six core sections — **Dashboard, Inventory, Products, Users, Expenses,** and **Settings** — reachable from a collapsible sidebar, with full light/dark theme support.
+The dashboard is organized around six main sections — **Dashboard, Inventory, Products, Users, Expenses,** and **Settings** — reachable from a collapsible sidebar, with full light/dark theme support.
 
 ## ✨ Key Features
 
-- **📊 Dashboard Overview** — At-a-glance KPI cards for sales, purchases, and expense summaries, plus a popular products widget for quick insight into store performance.
+- **📊 Dashboard Overview** — KPI cards for sales, purchases, and expense summaries, plus a popular products widget for quick insight into store performance.
 - **📋 Inventory Table** — A sortable, filterable data grid (powered by MUI X Data Grid) listing every product with price, rating, and current stock quantity.
 - **🛍️ Product Catalog** — A searchable, card-based product list with a **"Create Product"** modal for adding new items (name, price, stock quantity, and rating) on the fly.
 - **👥 User Management** — A data grid view of all registered users and their contact details.
 - **💰 Expense Analytics** — An interactive pie chart breaking down expenses by category, with category and date-range filters.
 - **⚙️ User Settings** — A settings panel for managing account preferences such as notifications, language, and display options.
-- **🌓 Dark Mode** — App-wide light/dark theme toggle backed by Redux state.
+- **🌓 Dark Mode** — Light/dark theme toggle backed by Redux state.
 - **📱 Responsive, Collapsible Sidebar** — A layout that adapts smoothly from mobile to desktop.
 
 ## 📸 Screenshots
@@ -66,9 +64,6 @@ The dashboard is organized around six core sections — **Dashboard, Inventory, 
 
 ### Inventory
 ![Inventory](./screenshots/inventory.png)
-
-### Users
-![Users](./screenshots/users.png)
 
 ### Expenses
 ![Expenses](./screenshots/expenses.png)
@@ -103,30 +98,6 @@ The dashboard is organized around six core sections — **Dashboard, Inventory, 
 | Middleware | Helmet (security headers), CORS, Morgan (logging), body-parser |
 | Dev Tooling | tsx, ts-node, nodemon, concurrently, rimraf |
 
-## 🗂 Project Structure
-
-```
-Inventory-Management-Dashboard/
-├── client/                    # Next.js frontend
-│   └── src/app/
-│       ├── (components)/      # Shared UI: Navbar, Sidebar, Header, Rating
-│       ├── dashboard/         # Dashboard cards & KPIs
-│       ├── inventory/         # Inventory data grid
-│       ├── products/          # Product list + Create Product modal
-│       ├── users/             # Users data grid
-│       ├── expenses/          # Expense pie chart & filters
-│       ├── settings/          # User settings panel
-│       └── state/             # Redux slices + RTK Query API definitions
-│
-└── server/                    # Express backend
-    ├── src/
-    │   ├── controllers/       # Request handlers (dashboard, product, user, expense)
-    │   └── routes/            # Express route definitions
-    └── prisma/
-        ├── schema.prisma      # Database schema
-        ├── migrations/        # Prisma migration history
-        └── seedData/          # Sample JSON data for seeding
-```
 
 ## 🧬 Data Model
 
@@ -222,7 +193,7 @@ npm run dev
 
 Open `http://localhost:3000` in your browser to view the dashboard.
 
-## 📜 Available Scripts
+## 📜 Scripts
 
 **Client**
 
@@ -261,4 +232,3 @@ GitHub: [@UtsavBajracharya](https://github.com/UtsavBajracharya)
 
 ---
 
-*This project currently has no license file. Consider adding one (e.g., [MIT](https://choosealicense.com/licenses/mit/)) if you plan to share or open this repository up for contributions.*
